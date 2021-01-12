@@ -34,6 +34,8 @@ GEM
       mini_portile2 (~> 2.4.0)
     puma (5.1.1)
       nio4r (~> 2.0)
+    reverse_markdown (2.0.0)
+      nokogiri
     ruby2_keywords (0.0.2)
     slack-ruby-bot (0.16.1)
       activesupport
@@ -61,6 +63,7 @@ DEPENDENCIES
   dotenv
   nokogiri
   puma
+  reverse_markdown
   slack-ruby-bot
 
 BUNDLED WITH
