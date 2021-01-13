@@ -1,7 +1,7 @@
 name: 2-minutes-cron
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/6 * * * *'
 jobs:
   cron:
     runs-on: ubuntu-latest
