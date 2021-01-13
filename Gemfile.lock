@@ -12,7 +12,7 @@ GEM
       faraday-net_http (~> 1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
-    faraday-net_http (1.0.0)
+    faraday-net_http (1.0.1)
     faraday_middleware (1.0.0)
       faraday (~> 1.0)
     gli (2.19.2)
@@ -26,8 +26,6 @@ GEM
     puma (5.1.1)
       nio4r (~> 2.0)
     racc (1.5.2)
-    reverse_markdown (2.0.0)
-      nokogiri
     ruby2_keywords (0.0.2)
     slack-ruby-client (0.15.1)
       faraday (>= 1.0)
@@ -48,7 +46,6 @@ DEPENDENCIES
   dotenv
   nokogiri (>= 1.11.0.rc4)
   puma
-  reverse_markdown
   slack-ruby-client
 
 BUNDLED WITH
