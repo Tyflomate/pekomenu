@@ -3,8 +3,7 @@
 require 'json'
 
 class Dish
-
-  def initialize(name, description, price: '', image_url: '')
+  def initialize(name:, description:, price:, image_url:)
     @name = name
     @description = description
     @price = price
@@ -13,25 +12,25 @@ class Dish
 
   def json_with_image(_options = {})
     {
-      "type": 'section',
-      "text": {
-        "type": 'mrkdwn',
-        "text": "*#{@name}*\n\n#{@description}\n\n#{@price}"
+      type: 'section',
+      text: {
+        type: 'mrkdwn',
+        text: "*#{@name}*\n\n#{@description}\n\n#{@price}"
       },
-      "accessory": {
-        "type": 'image',
-        "image_url": @image_url,
-        "alt_text": @name + ' image'
+      accessory: {
+        type: 'image',
+        image_url: @image_url,
+        alt_text: "#{@name} image"
       }
     }
   end
 
   def json_without_image(_options = {})
     {
-      "type": 'section',
-      "text": {
-        "type": 'mrkdwn',
-        "text": "*#{@name}*\n\n#{@description}\n\n#{@price}"
+      type: 'section',
+      text: {
+        type: 'mrkdwn',
+        text: "*#{@name}*\n\n#{@description}\n\n#{@price}"
       }
     }
   end
