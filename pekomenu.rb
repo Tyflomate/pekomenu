@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
+require 'rubygems'
+require 'bundler/setup'
 require 'slack-ruby-client'
 require 'open-uri'
 require 'nokogiri'
-require 'reverse_markdown'
 require 'dotenv'
-require 'slack_mrkdwn'
 require_relative 'dish'
 
 Dotenv.load
