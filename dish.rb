@@ -2,6 +2,7 @@
 
 require 'json'
 
+# Class which describe a dish to print out in slack messages syntax
 class Dish
   def initialize(name:, description:, price:, image_url:)
     @name = name

@@ -19,10 +19,10 @@ res = []
 menu_lines.each do |line|
   name = line.at_css('h6').content
   description = line.at_css('div.menu-description').content
-  price = line.at_css('div.price').nil? ? 'Pas de prix annoncé' : line.at_css('div.price').content
-  image_url = line.at_css('a.pretty_image').nil? ? '' : line.at_css('a.pretty_image').attributes['href'].content
+  price = line.at_css('div.price')&.content || 'Pas de prix annoncé'
+  image_url = line.at_css('a.pretty_image')&.attributes['href'].content || ''
 
   res.append(Dish.new(name: name, description: description, price: price, image_url: image_url))
 end
 
-client.chat_postMessage(channel: '#testbot', blocks: res, as_user: true)
+client.chat_postMessage(channel: '#random', blocks: res, as_user: true)

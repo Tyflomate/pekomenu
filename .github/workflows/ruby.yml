@@ -26,4 +26,6 @@ jobs:
         ruby-version: 2.7.2
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Send the pekopeko menu to slack
-      run: ruby pekomenu.rb
+      run: |
+        export SLACK_API_TOKEN=${{ secrets.SLACK_API_TOKEN }}
+        ruby pekomenu.rb
