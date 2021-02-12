@@ -20,7 +20,7 @@ menu_lines.each do |line|
   name = line.at_css('h6').content
   description = line.at_css('div.menu-description').content
   price = line.at_css('div.price')&.content || 'Pas de prix annoncé'
-  image_url = line.at_css('a.pretty_image')&.attributes['href'].content || ''
+  image_url = line.at_css('a.pretty_image')&.attributes&.dig('href')&.content || ''
 
   res.append(Dish.new(name: name, description: description, price: price, image_url: image_url))
 end
