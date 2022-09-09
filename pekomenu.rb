@@ -25,4 +25,4 @@ menu_lines.each do |line|
   res.append(Dish.new(name: name, description: description, price: price, image_url: image_url))
 end
 
-client.chat_postMessage(channel: '#random', blocks: res, as_user: true)
+client.chat_postMessage(channel: '#cantine', blocks: res, as_user: true)
