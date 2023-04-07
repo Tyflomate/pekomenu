@@ -12,7 +12,7 @@ Dotenv.load
 
 client = Slack::Web::Client.new(token: ENV['SLACK_API_TOKEN'])
 
-site = Nokogiri::HTML.parse(URI.open('https://www.pekopeko.fr/food-truck/'))
+site = Nokogiri::HTML.parse(URI.open('https://www.pekopeko.fr/camion/'))
 menu_lines = site.xpath('//ul[@class="featureddish"]/li')
 
 res = []
