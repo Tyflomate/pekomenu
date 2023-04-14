@@ -21,6 +21,8 @@ GEM
     hashie (5.0.0)
     multipart-post (2.3.0)
     nio4r (2.5.9)
+    nokogiri (1.14.3-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     puma (6.2.1)
@@ -36,6 +38,7 @@ GEM
     timers (4.3.5)
 
 PLATFORMS
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
@@ -46,7 +49,7 @@ DEPENDENCIES
   slack-ruby-client
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.10
