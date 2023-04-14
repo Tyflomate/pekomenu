@@ -8,12 +8,12 @@
 name: Ruby
 
 on:
+  workflow_dispatch: # Allow to trigger actions manually, for testing purpose
   schedule:
     - cron: '30 7 * * FRI'
 
 jobs:
   cron:
-
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
