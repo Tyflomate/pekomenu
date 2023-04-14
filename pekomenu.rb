@@ -18,7 +18,7 @@ menu_lines = site.css('.et_pb_with_background .et_pb_row .et_pb_blurb_content')
 res = []
 menu_lines.each do |line|
   name, price = line.at_css('h4 span').content.split(" | ")
-  price = price || 'Pas de prix annoncé'
+  price ||= 'Pas de prix annoncé'
   description = line.at_css('.et_pb_blurb_description').content || ''
   image_url = line.at_css('img')&.attributes&.dig('src').content || ''
 
