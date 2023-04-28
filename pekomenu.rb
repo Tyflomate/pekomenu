@@ -19,7 +19,7 @@ res = []
 menu_lines.each do |line|
   name, price = line.at_css('h4 span').content.split(' | ')
   price ||= 'Pas de prix annoncé'
-  description = line.at_css('.et_pb_blurb_description').content || ''
+  description = line.at_css('.et_pb_blurb_description')&.content || 'Pas de description :('
   image_url = line.at_css('img')&.attributes&.dig('src')&.content || ''
 
   res.append(Dish.new(name:, description:, price:, image_url:))
